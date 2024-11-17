@@ -975,16 +975,16 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
         result = session.run(
     """
     MATCH (a:Aluno)-[r:CURSOU]->(d:Disciplina)
-    RETURN a.nome AS aluno, d.id AS id, d.nome AS nomeDisciplina, 
+    RETURN a.ra AS ra, a.nome AS aluno, d.id AS id, d.nome AS nomeDisciplina, 
            r.semestre AS semestre, 
            r.ano AS ano, 
            r.nota AS notaFinal
-    ORDER BY a.nome, d.id;
+    ORDER BY a.ra, a.nome, d.id;
     """
 )
 
         
-        df = pd.DataFrame(result, columns=["aluno", "id", "disciplina", "semestre", "ano", "nota"])
+        df = pd.DataFrame(result, columns=["ra", "aluno", "id", "disciplina", "semestre", "ano", "nota"])
         print(df)
 
         print("\nQuery 2: Histórico de disciplinas ministradas por qualquer professor")
@@ -1011,11 +1011,11 @@ MATCH (a)-[:MATRICULADO_EM]->(curso:Curso)-[:TEM_DISCIPLINA]->(d:Disciplina)
 WITH a, disciplinas_cursadas, ultimo_ano, collect(DISTINCT d) AS disciplinas_curso
 WITH a, disciplinas_cursadas, disciplinas_curso, ultimo_ano, size(disciplinas_cursadas) AS qtd_cursadas, size(disciplinas_curso) AS qtd_curso
 WHERE ALL(d IN disciplinas_curso WHERE d IN disciplinas_cursadas)
-RETURN a.nome AS aluno, a.id AS aluno_id, ultimo_ano AS ano_formacao
+RETURN a.ra AS ra, a.nome AS aluno, a.id AS aluno_id, ultimo_ano AS ano_formacao
         """, 
     )
 
-        df = pd.DataFrame(result, columns=["aluno", "aluno_id", "ano_formacao"])
+        df = pd.DataFrame(result, columns=["ra", "aluno", "aluno_id", "ano_formacao"])
         print(df)
         
 
