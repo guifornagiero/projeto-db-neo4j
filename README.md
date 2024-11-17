@@ -26,3 +26,7 @@ Pedro Augusto Bento Rocha - 22.122.028-8<br>
 - docker-compose.yml: arquivo de configuração dos containers Docker para o Neo4j
 - main.py: arquivo de execução do projeto, onde é criada toda a estrutura do banco, onde é populado, e onde são selecionadas as queries
 - data/: arquivo de volumes do Docker
+
+## Problemas comuns
+- Pode ser que, na primeira vez que o comando ```python main.py``` for executado, mostre uma mensagem de erro.
+- Basta executar novamente, que o código funcionará de forma correta, trazendo os selects das queries.
