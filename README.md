@@ -15,17 +15,17 @@ Guilherme Fornagiero de Carvalho - 22.122.016-3<br>
 Paulo Vinícius Bessa de Brito - 22.122.005-6<br>
 Pedro Augusto Bento Rocha - 22.122.028-8<br>
 
+## Estrutura do projeto
+- docker-compose.yml: arquivo de configuração dos containers Docker para o Neo4j
+- main.py: arquivo de execução do projeto, onde é criada toda a estrutura do banco, onde é populado, e onde são selecionadas as queries
+- data/: arquivo de volumes do Docker
+
 ## Como rodar o projeto?
 1. Instale o Docker <br>
 2. Instale o interpretador do Python <br>
 3. Instale o driver do Neo4j com o comando ```pip install neo4j``` <br>
 4. Suba o container Docker com o comando ```docker-compose up -d``` <br>
 5. Execute o arquivo main.py com o comando ```python main.py``` <br>
-
-## Estrutura do projeto
-- docker-compose.yml: arquivo de configuração dos containers Docker para o Neo4j
-- main.py: arquivo de execução do projeto, onde é criada toda a estrutura do banco, onde é populado, e onde são selecionadas as queries
-- data/: arquivo de volumes do Docker
 
 ## Problemas comuns
 - Pode ser que, na primeira vez que o comando ```python main.py``` for executado, mostre uma mensagem de erro.
