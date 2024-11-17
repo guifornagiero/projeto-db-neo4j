@@ -25,7 +25,7 @@ Pedro Augusto Bento Rocha - 22.122.028-8<br>
 2. Entre na pasta do projeto com o comando ```cd projeto-db-neo4j```
 3. Instale o Docker <br>
 4. Instale o interpretador do Python <br>
-5. Instale o driver do Neo4j com o comando ```pip install neo4j``` <br>
+5. Instale o driver do Neo4j e do Pandas com o comando ```pip install neo4j && pip install pandas``` <br>
 6. Suba o container Docker com o comando ```docker-compose up -d``` <br>
 7. Execute o arquivo main.py com o comando ```python main.py``` <br>
 
