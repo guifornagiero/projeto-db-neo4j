@@ -75,7 +75,7 @@ Para criar as coleções foi usado como base o diagrama relacional, no qual as e
 ## Como validar as Queries
 
 1. Execute o arquivo main.py para popular os dados de forma correta e ter o resultado das queries
-2. Se quiser ter uma visão mais detalhada das queries, abra o Neo4J Web localizado na porta localhost:7474, com isso será possível executar as queries separadamente.
+2. Se quiser ter uma visão mais detalhada das queries, abra o Neo4J Web localizado na porta localhost:7474, com isso será possível executar as queries separadamente, cada query está localizada no arquivo queries.cypher
 
 ## Como rodar o projeto?
 1. Clone o projeto com o seguinte comando ```git clone https://github.com/guifornagiero/projeto-db-neo4j.git``` <br>
