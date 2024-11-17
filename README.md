@@ -20,6 +20,58 @@ Pedro Augusto Bento Rocha - 22.122.028-8<br>
 - main.py: arquivo de execução do projeto, onde é criada toda a estrutura do banco, onde é populado, e onde são selecionadas as queries
 - data/: arquivo de volumes do Docker
 
+## Descrição das coleções
+Para criar as coleções foi usado como base o diagrama relacional, no qual as entidades são nós e as relações são arestas, rodando uma query em Neo4J, chegou-se na seguinte descrição:
+
+### Rótulos
+- Departamento
+- Professor
+- Curso
+- Disciplina
+- Aluno
+- TCC
+
+### Tipos de Relacionamento
+- PERTENCE_A
+- CHEFE_DE
+- TEM_DISCIPLINA
+- PROFESSOR_DE
+- MATRICULADO_EM
+- CURSOU
+- ORIENTADO_POR
+- REALIZA
+
+### Property Keys
+- nome
+- id
+- semestre
+- ano
+- ra
+- nota
+
+### Node Type Properties
+- :Professor.nome
+- :Professor.id
+- :Curso.nome
+- :Curso.id
+- :Disciplina.nome
+- :Disciplina.id
+- :Disciplina.semestre
+- :Aluno.nome
+- :Aluno.id
+- :Aluno.ra
+- :TCC.nome
+- :TCC.id
+- :Departamento.nome
+- :Departamento.id
+
+### Relation Type Properties
+- :PROFESSOR_DE.semestre
+- :PROFESSOR_DE.ano
+- :CURSOU.semestre
+- :CURSOU.ano
+- :CURSOU.nota
+
 ## Como rodar o projeto?
 1. Clone o projeto com o seguinte comando ```git clone https://github.com/guifornagiero/projeto-db-neo4j.git``` <br>
 2. Entre na pasta do projeto com o comando ```cd projeto-db-neo4j```
