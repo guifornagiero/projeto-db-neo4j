@@ -21,7 +21,7 @@ Pedro Augusto Bento Rocha - 22.122.028-8<br>
 - data/: arquivo de volumes do Docker
 
 ## Descrição das coleções
-Para criar as coleções foi usado como base o diagrama relacional, no qual as entidades são nós e as relações são arestas, rodando uma query em Neo4J, chegou-se na seguinte descrição:
+Para criar as coleções foi usado como base o diagrama relacional, no qual as entidades são nós e as relações são arestas. Executando uma query em Neo4J, chegou-se na seguinte descrição em relação ao grafo:
 
 ### Rótulos
 - Departamento
