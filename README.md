@@ -72,6 +72,9 @@ Para criar as coleções foi usado como base o diagrama relacional, no qual as e
 - :CURSOU.ano
 - :CURSOU.nota
 
+## Schema
+<img width="1662" alt="Screenshot 2024-11-18 at 9 19 03 PM" src="https://github.com/user-attachments/assets/7d00f364-31e2-433a-bb11-ddd61b5e5ca3">
+
 ## Como validar as Queries
 
 1. Execute o arquivo main.py para popular os dados de forma correta e ter o resultado das queries
